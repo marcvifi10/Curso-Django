@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <h1>Plantilla adiós!!!</h1>
+		{# COMENTARIO 1 #}
+		{% comment %}
+			Comentarios de 2
+			líneas
+		{% endcomment %}
+		{% if nombre_persona == 'Marc' %}
+			<p>El profesor se llama Marc</p>
+		{% else %}
+			<p>El profesor NO se llama Marc</p>
+		{% endif %}
+		<p>El nombre es: {{ nombre_persona.upper }} {{ apellido_persona }}</p>
+		<p>El nombre es: {{ nombre_persona2|upper }} {{ apellido_persona2|lower }}</p>
+		<p>Momento actual: {{ momento_actual }}</p>
+		<p>Dia actual: {{ momento_actual.day }}</p>
+		<p>Mes actual: {{ momento_actual.month }}</p>
+		<p>Año actual: {{ momento_actual.year }}</p>
+		<p>{{ temas }}</p>
+		<p>{{ temas.1 }}</p>
+		<p>
+			<ul>
+				{% if temas %}
+					{% for elTema in temas %}
+						<li>{{ elTema|first|lower }}</li>
+					{% endfor %}
+				{% else %}
+					<p>No hay elementos que mostrar!!!</p>
+				{% endif %}
+			</ul>
+		</p>
+    </body>
+</html>

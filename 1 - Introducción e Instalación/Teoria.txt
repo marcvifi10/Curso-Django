@@ -1,0 +1,1 @@
+Procedemos a la instalación de Django

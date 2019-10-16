@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h1>Plantilla adiós!!!</h1>
+		<p>El nombre es: {{ nombre_persona }} {{ apellido_persona }}</p>
+		<p>El nombre es: {{ nombre_persona2 }} {{ apellido_persona2 }}</p>
+		<p>Momento actual: {{ momento_actual }}</p>
+		<p>Dia actual: {{ momento_actual.day }}</p>
+		<p>Mes actual: {{ momento_actual.month }}</p>
+		<p>Año actual: {{ momento_actual.year }}</p>
+		<p>{{ temas }}</p>
+		<p>{{ temas.1 }}</p>
+		<p>
+			<ul>
+				{% if temas %}
+					{% for elTema in temas %}
+						<li>{{ elTema }}</li>
+					{% endfor %}
+				{% else %}
+					<p>No hay elementos que mostrar!!!</p>
+				{% endif %}
+			</ul>
+		</p>
+    </body>
+</html>
